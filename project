@@ -1,1 +1,168 @@
-
+import math
+c1 = int(input("a,s,v,u,t ถ้าไม่มีตัวแปรตัวไหนในโจทย์ใส่ 2 เช่นไม่มี a ให้ใส่ 21111 แล้วตัวไหนมีให้ใส่ 1 :"))
+if c1 == 21111:
+  print("s=((u+v)/2)*t")
+  c2 = int(input("a,s,v,u,t ถ้าในโจทย์ไม่มีตัวแปรตัวไหนมาให้ใส่ 3 เช่นไม่มี s ให้ใส่ 23111 :"))
+  if c2 == 23111:
+    print("ไม่มี a,หา s")
+    v = int(input("input v:"))
+    u = int(input("input u:"))
+    t = int(input("input t:"))
+    s = ((u+v)/2)*t
+    print("s = ",s)
+  elif c2 == 21311:
+    print("ไม่มี a,หา v")
+    s = int(input("input s:"))
+    u = int(input("input u:"))
+    t = int(input("input t:"))
+    v = ((2*s)/t)-u
+    print("v = ",v)
+  elif c2 == 21131:
+    print("ไม่มี a,หา u")
+    s = int(input("input s:"))
+    v = int(input("input v:"))
+    t = int(input("input t:"))
+    u = ((2*s)/t)-v
+    print("u = ",u)
+  elif c2 == 21113:
+    s = int(input("input s:"))
+    v = int(input("input v:"))
+    u = int(input("input u:"))
+    t = s/((u+v)/2)
+    print("t = ",t)
+  else :
+    print("error")
+elif c1 == 12111:
+  print("v=u+at")
+  c2 = int(input("a,s,v,u,t ถ้าในโจทย์ไม่มีตัวแปรตัวไหนมาให้ใส่ 3 เช่นไม่มี s ให้ใส่ 23111 :"))
+  if c2 == 32111:
+    print("ไม่มี s,หา a")
+    v = int(input("input v:"))
+    u = int(input("input u:"))
+    t = int(input("input t:"))
+    a = (v-u)*t
+    print("a = ",a)
+  elif c2 == 12311:
+    print("ไม่มี s,หา v")
+    a = int(input("input a:"))
+    u = int(input("input u:"))
+    t = int(input("input t:"))
+    v = u+(a*t)
+    print("v = ",v)
+  elif c2 == 12131:
+    print("ไม่มี s,หา u")
+    a = int(input("input a:"))
+    v = int(input("input v:"))
+    t = int(input("input t:"))
+    u = v-(a*t)
+    print("u = ",u)
+  elif c2 == 12113:
+    print("ไม่มี s,หา t")
+    a = int(input("input a:"))
+    v = int(input("input v:"))
+    u = int(input("input u:"))
+    t = (v-u)/a
+    print("t = ",t)
+  else :
+    print("error")
+elif c1 == 11211:
+  print("s=(u*t)+((1/2)*a*(t**2))")
+  c2 = int(input("a,s,v,u,t ถ้าในโจทย์ไม่มีตัวแปรตัวไหนมาให้ใส่ 3 เช่นไม่มี s ให้ใส่ 23111 :"))
+  if c2 == 31211:
+    print("ไม่มี v,หา a")
+    s = int(input("input s:"))
+    u = int(input("input u:"))
+    t = int(input("input t:"))
+    print("t = ",t)
+  elif c2 == 13211:
+    print("ไม่มี v,หา s")
+    a = int(input("input a:"))
+    u = int(input("input u:"))
+    t = int(input("input t:"))
+    s = (u*t)+((1/2)*a*(t**2))
+    print("s = ",s)
+  elif c2 == 11231:
+    print("ไม่มี v,หา u")
+    a = int(input("input a:"))
+    s = int(input("input s:"))
+    t = int(input("input t:"))
+    u = s-(((1/2)*a*(t**2)))/t
+    print("u = ",u)
+  elif c2 == 11213:
+    print("ไม่มี v,หา t")
+    a = int(input("input a:"))
+    s = int(input("input s:"))
+    u = int(input("input u:"))
+    t1 = ((-u)+math.sqrt((u**2)+(2*a*(-s))))/a
+    t2 = ((-u)-math.sqrt((u**2)+(2*a*(-s))))/a
+    print("t1,t2 =",t1,",",t2)
+  else:
+    print("error")
+elif c1 == 11121:
+  print("s=(v*t)-((1/2)*a*(t**2))")
+  c2 = int(input("a,s,v,u,t ถ้าในโจทย์ไม่มีตัวแปรตัวไหนมาให้ใส่ 3 เช่นไม่มี s ให้ใส่ 23111 :"))
+  if c2 == 31121:
+    print("ไม่มี u,หา a")
+    s = int(input("input s:"))
+    v = int(input("input v:"))
+    t = int(input("input t:"))
+    a = ((-2)*(s-(v*t)))/(t**2)
+    print("a = ",a)
+  elif c2 == 13121:
+    print("ไม่มี u,หา s")
+    a = int(input("input a:"))
+    v = int(input("input v:"))
+    t = int(input("input t:"))
+    s = (v*t)-((1/2)*a*(t**2))
+    print("s = ",s)
+  elif c2 == 11321:
+    print("ไม่มี u,หา v")
+    a = int(input("input a:"))
+    s = int(input("input s:"))
+    t = int(input("input t:"))
+    v = (s+((1/2)*a*(t**2)))*t
+  elif c2 == 11123:
+    print("ไม่มี u,หา t")
+    u = int(input("input u:"))
+    a = int(input("input a:"))
+    s = int(input("input s:"))
+    t1 = ((-u)+math.sqrt((u**2)+(2*a*s)))/(-a)
+    t2 = ((-u)-math.sqrt((u**2)+(2*a*s)))/(-a)
+    print("t1,t2 =",t1,",",t2)
+  else:
+    print("error")
+elif c1 == 11112:
+  print("v**2=(u**2)+(2*a*s)")
+  c2 = int(input("a,s,v,u,t ถ้าในโจทย์ไม่มีตัวแปรตัวไหนมาให้ใส่ 3 เช่นไม่มี s ให้ใส่ 23111 :"))
+  if c2 == 31112:
+    print("ไม่มี t,หา a")
+    s = int(input("input s:"))
+    v = int(input("input v:"))
+    u = int(input("input u:"))
+    a = ((v**2)-(u**2))/(2*s)
+    print("a = ",a)
+  elif c2 == 13112:
+    print("ไม่มี t,หา s")
+    a = int(input("input a:"))
+    v = int(input("input v:"))
+    u = int(input("input u:"))
+    s = ((v**2)-(u**2))/(2*a)
+    print("s = ",s)
+  elif c2 == 11312:
+    print("ไม่มี t,หา v")
+    a = int(input("input a:"))
+    s = int(input("input s:"))
+    u = int(input("input u:"))
+    v = math.sqrt((u**2)+(2*a*s))
+    print("v = ",v)
+  elif c2 == 11132:
+    print("ไม่มี t,หา u")
+    a = int(input("input a:"))
+    s = int(input("input s:"))
+    v = int(input("input v:"))
+    u = math.sqrt((v**2)-(2*a*s))
+    print("u = ",u)
+  else:
+    print("error")
+else :
+   print("error")
